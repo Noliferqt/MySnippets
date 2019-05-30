@@ -1,0 +1,28 @@
+// checkbox with "bird"
+.checkbox-indicator
+  position: absolute
+  left: 0
+  top: 0
+  width: 17px
+  height: 17px
+  background: #fff
+  border: 1px solid #786e76
+.checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.checkbox input[type="checkbox"]:checked + .checkbox-indicator::after
+  content: ""
+  position: absolute
+  height: 1px
+  background: #050401
+.checkbox input[type="checkbox"]:checked + .checkbox-indicator::before
+  transform: rotate(45deg)
+  left: 4px
+  width: 4px
+  top: 55%
+.checkbox input[type="checkbox"]:checked + .checkbox-indicator::after
+  transform: rotate(-45deg)
+  left: 6px
+  width: 8px
+  top: 45%
+.checkbox input[type="checkbox"]:checked + .checkbox-indicator
+  background: #feb825
+  border: none
